@@ -12,7 +12,8 @@ def load_train_and_test(path_to_train, path_to_test):
 
     # number of observations (objects) in train and test sets
     n_train, n_test = train_df.shape[0], test_df.shape[0]
-
+    print(n_train)
+    print(n_test)
     # auto brand and too_much are categorical so we encode these columns
     # ex: "Volvo" -> 1, "Audi" -> 2 etc
     auto_brand_encoder = preprocessing.LabelEncoder()
