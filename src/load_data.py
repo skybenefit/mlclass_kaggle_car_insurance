@@ -11,9 +11,14 @@ def load_train_and_test(path_to_train, path_to_test):
                           header=0, index_col=0)
 
     # number of observations (objects) in train and test sets
+    # ndarray.shape - размеры массива, его форма.
+    # Это кортеж натуральных чисел, показывающий длину массива по каждой оси.
+    # Для матрицы из n строк и m столбов, shape будет (n,m).
+    # Число элементов кортежа shape равно ndim.
     n_train, n_test = train_df.shape[0], test_df.shape[0]
     print(n_train)
     print(n_test)
+
     # auto brand and too_much are categorical so we encode these columns
     # ex: "Volvo" -> 1, "Audi" -> 2 etc
     auto_brand_encoder = preprocessing.LabelEncoder()
